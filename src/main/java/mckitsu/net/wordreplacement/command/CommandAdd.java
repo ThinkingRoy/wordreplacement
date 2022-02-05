@@ -1,6 +1,7 @@
 package mckitsu.net.wordreplacement.command;
 
 import mckitsu.net.wordreplacement.Replacement;
+import mckitsu.net.wordreplacement.file.FileLoader;
 import mckitsu.net.wordreplacement.file.MakeFile;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -35,6 +36,7 @@ public class CommandAdd implements CommandExecutor {
             try {
                 player.sendMessage(String.format("已新增%s及%s至伺服過濾器", args[1], args[2]));
                 replacement.library.put(args[1], args[2]);
+                FileLoader.write(replacement.library);
 
             }catch (Throwable exc){
                 player.sendMessage("文字檔新增失敗");
