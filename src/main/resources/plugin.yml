@@ -1,0 +1,9 @@
+name: WordReplacement
+version: '${project.version}'
+main: mckitsu.net.wordreplacement.WordReplacement
+api-version: 1.16
+commands:
+  word:
+    description: add illegal word filter
+    usage: /<command>
+    permission: net.mckitsu.messagestream.command
