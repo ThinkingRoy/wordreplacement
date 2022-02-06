@@ -3,6 +3,7 @@ package mckitsu.net.wordreplacement.file;
 import net.mckitsu.file.FileManager;
 import net.mckitsu.file.YamlManager;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -15,6 +16,7 @@ public class FileLoader {
         FileManager fileManager = new FileManager(FileLoader.filePath, "config.yml");
         if(fileManager.exists()){
             YamlManager<Map<String, String>> yamlManager = new YamlManager<>();
+
             try {
                 Map<String, String> result = yamlManager.load(fileManager.readAsString(StandardCharsets.UTF_8));
                 if(result == null)
@@ -43,4 +45,5 @@ public class FileLoader {
         fileManager.createFile();
         fileManager.write(yamlManager.dump(map), StandardCharsets.UTF_8);
     }
+
 }

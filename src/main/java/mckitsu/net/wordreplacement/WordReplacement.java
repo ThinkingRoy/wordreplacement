@@ -2,13 +2,14 @@ package mckitsu.net.wordreplacement;
 
 import mckitsu.net.wordreplacement.event.EventCommand;
 import mckitsu.net.wordreplacement.file.FileLoader;
-import mckitsu.net.wordreplacement.file.LoadFile;
-import mckitsu.net.wordreplacement.file.MakeFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
+
+
 public final class WordReplacement extends JavaPlugin {
+    public static final Replacement replacement = new Replacement();
 
 
 

@@ -1,6 +1,8 @@
 package mckitsu.net.wordreplacement.event;
 
 import mckitsu.net.wordreplacement.command.CommandAdd;
+import mckitsu.net.wordreplacement.command.CommandInfo;
+import mckitsu.net.wordreplacement.command.CommandReload;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,8 +13,10 @@ public class EventCommand implements CommandExecutor {
     private final HashMap<String, CommandExecutor> commandList = new HashMap<>();
 
 
-    public EventCommand(){
+    public EventCommand() {
         this.commandList.put("add", new CommandAdd());
+        this.commandList.put("reload", new CommandReload());
+        this.commandList.put("info", new CommandInfo());
     }
 
 

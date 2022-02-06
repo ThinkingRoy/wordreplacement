@@ -1,15 +1,12 @@
 package mckitsu.net.wordreplacement.command;
 
 import mckitsu.net.wordreplacement.Replacement;
+import mckitsu.net.wordreplacement.WordReplacement;
 import mckitsu.net.wordreplacement.file.FileLoader;
-import mckitsu.net.wordreplacement.file.MakeFile;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.util.Arrays;
-import java.util.Map;
 
 public class CommandAdd implements CommandExecutor {
     Replacement replacement = new Replacement();
@@ -43,7 +40,6 @@ public class CommandAdd implements CommandExecutor {
                 exc.printStackTrace();
                 return false;
             }
-
         }
 
         return false;

@@ -7,3 +7,4 @@ commands:
     description: add illegal word filter
     usage: /<command>
     permission: net.mckitsu.messagestream.command
+

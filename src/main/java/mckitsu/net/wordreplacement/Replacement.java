@@ -28,8 +28,10 @@ public class Replacement {
     }
 
 
-
     public void addReplaceMap(Map<String, String> books) {
         library.putAll(books);
     }
+
+
+    public void clear(){library.clear();}
 }
